@@ -8,5 +8,5 @@ function print_date()
 
 date_value=$(print_date)
 
-echo $date_value
 echo $?
+echo $date_value
