@@ -1,8 +1,10 @@
 #! /bin/bash
 
-while getopts ":a:b:c" arg
+'''
+'''
+while getopts "a:b:c" opt
 do
-    case $arg in
+    case $opt in
         a)
             echo "a's argument is $OPTARG"
             ;;
@@ -14,6 +16,12 @@ do
             ;;
         ?)
             echo "unknow argument"
+            ;;
+        :)
+            echo "no arg for opt $OPTARG"
+            ;;
+        *)
+            echo "unkonw error"
             ;;
     esac
 done
