@@ -114,3 +114,27 @@ for value in "${array[*]:1:2}"
 do
     echo $value
 done
+
+echo
+
+
+# 数据替换
+# result
+# zzz fff ccc ddd eee
+# zzz fff ccc ddd eee
+# bbb ccc
+# ddd eee
+array=("zzz" "bbb ccc" "ddd eee")
+array=${array[@]/bbb/fff}
+echo $array
+for value in "${array[@]}"
+do
+    echo $value
+done
+
+
+
+
+
+
+
